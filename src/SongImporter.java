@@ -35,10 +35,10 @@ public class SongImporter
                 lineNumber++; // Keep track of line numbers to make inspection of data errors simpler.
 
                 // Limit to 30 lines for testing (remove when you are testing real files)
-                if (lineNumber > 30)
-                {
-                    break;
-                }
+                // if (lineNumber > 30)
+                // {
+                //     break;
+                // }
 
                 // Read one line from the CSV file and store it in the variable "line"
                 String line = csv.nextLine();
@@ -51,7 +51,7 @@ public class SongImporter
                 String trackName = fields[1];
                 String releaseDate = fields[2];
                 String genre = fields[3];
-                String length = fields[4];
+                String len = fields[4];
                 String shakeTheAudience = fields[5];
                 String obscene = fields[6];
                 String danceability = fields[7];
@@ -59,10 +59,10 @@ public class SongImporter
                 String topic = fields[9];
 
                 // Debug print
-                //System.out.println("artist: " + artist + " length: " + length + "topic: " + topic);
+                //System.out.println("artist: " + artist + " length: " + len + "topic: " + topic);
 
                 // Replace the next line with your song constructor
-                Song song = new Song(artistName, trackName); // code to construct a song object
+                Song song = new Song(artistName, trackName, releaseDate, genre, len, shakeTheAudience, obscene, danceability, loudness, topic); // code to construct a song object
 
                 // Add the song object to the data output. (Leave alone!~)
                 songs.add(song);

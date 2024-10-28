@@ -124,7 +124,7 @@ public class App {
         System.out.println("Song with the lowest shakeability score: " + lowestshake.getShakeTheAudience());
         System.out.println("Song with the highest loudness rating: " + loudestSong.getLoudness());
         System.out.println("Average obscentiy each decade: ");
-        System.out.println("1950-1959: " + decadeObscene5/((double)songsDecade6));
+        System.out.println("1950-1959: " + decadeObscene5/((double)songsDecade5));
         System.out.println("1960-1969: " + decadeObscene6/((double)songsDecade6));
         System.out.println("1970-1979: " + decadeObscene7/((double)songsDecade7));
         System.out.println("1980-1989: " + decadeObscene8/((double)songsDecade8));

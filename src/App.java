@@ -18,8 +18,23 @@ public class App {
         Song lowestshake=songs.get(0);
         Song largestlen=songs.get(0);
         Song loudestSong=songs.get(0);
-        int[] songsDecade = new int[25];
-        double[] decadeObscene = new double[25];
+        int songsDecade5=0;
+        int songsDecade6=0;
+        int songsDecade7=0;
+        int songsDecade8=0;
+        int songsDecade9=0;
+        int songsDecade10=0;
+        int songsDecade11=0;
+        double decadeObscene5=0;
+        double decadeObscene6=0;
+        double decadeObscene7=0;
+        double decadeObscene8=0;
+        double decadeObscene9=0;  
+        double decadeObscene10=0;
+        double decadeObscene11=0;
+
+
+
         for (int i=0; i<songs.size(); i++)
         {
             // Get the current song matching the loop index i
@@ -61,14 +76,39 @@ public class App {
             // Check for which deacade the song is from
             int currYear=Integer.parseInt(s.getReleaseDate());
             currYear/=10;
-            if(currYear/10==19){
-                currYear%=10;
-                songsDecade[currYear]++;
-                decadeObscene[currYear]+=(double) Double.parseDouble(s.getObscene());
-            } else{
-                currYear%=10;
-                songsDecade[10+currYear]++;
-                decadeObscene[10+currYear]+=(double) Double.parseDouble(s.getObscene());
+            // if(currYear/10==19){
+            //     currYear%=10;
+            //     songsDecade[currYear]++;
+            //     decadeObscene[currYear]+=(double) Double.parseDouble(s.getObscene());
+            // } else{
+            //     currYear%=10;
+            //     songsDecade[10+currYear]++;
+            //     decadeObscene[10+currYear]+=(double) Double.parseDouble(s.getObscene());
+            // }
+            if(currYear==195){
+                songsDecade5++;
+                decadeObscene5+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==196){
+                songsDecade6++;
+                decadeObscene6+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==197){
+                songsDecade7++;
+                decadeObscene7+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==197){
+                songsDecade7++;
+                decadeObscene7+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==198){
+                songsDecade8++;
+                decadeObscene8+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==199){
+                songsDecade9++;
+                decadeObscene9+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==200){
+                songsDecade10++;
+                decadeObscene10+=(double) Double.parseDouble(s.getObscene());
+            } else if(currYear==201){
+                songsDecade11++;
+                decadeObscene11+=(double) Double.parseDouble(s.getObscene());
             }
             
 
@@ -84,13 +124,13 @@ public class App {
         System.out.println("Song with the lowest shakeability score: " + lowestshake.getShakeTheAudience());
         System.out.println("Song with the highest loudness rating: " + loudestSong.getLoudness());
         System.out.println("Average obscentiy each decade: ");
-        System.out.println("1950-1959: " + decadeObscene[5]/((double)songsDecade[5]));
-        System.out.println("1960-1969: " + decadeObscene[6]/((double)songsDecade[6]));
-        System.out.println("1970-1979: " + decadeObscene[7]/((double)songsDecade[7]));
-        System.out.println("1980-1989: " + decadeObscene[8]/((double)songsDecade[8]));
-        System.out.println("1990-1999: " + decadeObscene[9]/((double)songsDecade[9]));
-        System.out.println("2000-2009: " + decadeObscene[10]/((double)songsDecade[10]));
-        System.out.println("2010-2019: " + decadeObscene[11]/((double)songsDecade[11]));
+        System.out.println("1950-1959: " + decadeObscene5/((double)songsDecade6));
+        System.out.println("1960-1969: " + decadeObscene6/((double)songsDecade6));
+        System.out.println("1970-1979: " + decadeObscene7/((double)songsDecade7));
+        System.out.println("1980-1989: " + decadeObscene8/((double)songsDecade8));
+        System.out.println("1990-1999: " + decadeObscene9/((double)songsDecade9));
+        System.out.println("2000-2009: " + decadeObscene10/((double)songsDecade10));
+        System.out.println("2010-2019: " + decadeObscene11/((double)songsDecade11));
     }
     
 }
